@@ -9,4 +9,9 @@ server:
 evans:
 	C:\\Evans\evans.exe --host localhost --port 9090 -r repl
 
+push:
+	git add .
+	git commit -m "$(msg)"
+	git push
+
 .PHONY: proto server evans
