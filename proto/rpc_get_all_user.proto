@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pb;
+
+import "user.proto";
+
+option go_package = "simple_bank/pb";
+
+message GetAllUserResponse {
+    repeated User users = 1;
+}

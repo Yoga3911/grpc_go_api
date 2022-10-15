@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pb;
+
+import "rpc_create_user.proto";
+import "rpc_login_user.proto";
+import "rpc_get_all_user.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "simple_bank/pb";
+
+service simple_bank {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
+    rpc GetAllUser (google.protobuf.Empty) returns (GetAllUserResponse) {}
+    rpc LoginUser (LoginUserRequest) returns (LoginUserResponse) {}
+}
